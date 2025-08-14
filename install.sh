@@ -85,10 +85,8 @@ main() {
     # 5. Set up Python virtual environment
     print_msg blue "Setting up Python virtual environment..."
     python3 -m venv venv
-    source venv/bin/activate
-
     print_msg blue "Installing Python dependencies from requirements.txt..."
-    pip install -r requirements.txt
+    ./venv/bin/pip install -r requirements.txt
 
     # 6. Interactive Configuration
     print_msg blue "Configuring the bot..."
