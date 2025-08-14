@@ -23,7 +23,7 @@
 # --- Script Configuration ---
 # !!! IMPORTANT !!!
 # CHANGE THIS TO YOUR BOT'S GIT REPOSITORY URL
-GIT_REPO_URL="https://github.com/PuneetGOTO/DISCORDCJBT.git"
+GIT_REPO_URL="https://github.com/PuneetGOTO/cbndsaa.git"
 
 # Directory where the bot will be installed
 INSTALL_DIR="/opt/discord_lottery_bot"
