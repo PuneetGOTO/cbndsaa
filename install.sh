@@ -93,11 +93,12 @@ main() {
     if [ -f ".env" ]; then
         print_msg yellow ".env file already exists. Skipping creation."
     else
-        cp .env.example .env
         read -p "Please enter your Discord Bot Token: " BOT_TOKEN
         read -p "Please enter your Bot Owner ID: " BOT_OWNER_ID
-        sed -i "s/^BOT_TOKEN=.*/BOT_TOKEN=${BOT_TOKEN}/" .env
-        sed -i "s/^BOT_OWNER_ID=.*/BOT_OWNER_ID=${BOT_OWNER_ID}/" .env
+        
+        # Create .env file from scratch
+        echo "DISCORD_TOKEN=${BOT_TOKEN}" > .env
+        echo "BOT_OWNER_ID=${BOT_OWNER_ID}" >> .env
     fi
 
     # 7. Set up systemd service
